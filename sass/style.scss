@@ -1,0 +1,14 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+div {
+    background:rgba(0, 0, 0, 0.1);
+}
+@import 'partials/grid';
+@import 'partials/typography';

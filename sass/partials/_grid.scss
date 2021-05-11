@@ -1,0 +1,49 @@
+/* Grid
+-----------------------------*/
+
+.container {
+	margin-right:auto;
+	margin-left:auto;
+	max-width: 1140px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+	.col-sm-#{$i} {
+		flex-basis: percentage($i/12);
+		padding-left: 15px;
+		padding-right:15px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+		@for $i from 1 through 12 {
+		.col-md-#{$i} {
+			flex-basis: percentage($i/12);
+			padding-left: 15px;
+			padding-right:15px;
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+		@for $i from 1 through 12 {
+		.col-lg-#{$i} {
+			flex-basis: percentage($i/12);
+			padding-left: 15px;
+			padding-right:15px;
+		}
+	}
+
+	@for $i from 1 through 12 {
+		.col-lg-offset-#{$i} {
+			margin-left: percentage($i/12);
+		}
+	}
+
+}
